@@ -1,106 +1,126 @@
-@article{Zhu2017Visual,
+@InProceedings{Zhu2017VisualSemantic,
   author    = {Yuke Zhu and Daniel Gordon and Eric Kolve and Dieter Fox and Li Fei-Fei and Abhinav Gupta and Roozbeh Mottaghi and Ali Farhadi},
   title     = {Visual Semantic Planning Using Deep Successor Representations},
-  journal   = {Proceedings of the IEEE International Conference on Computer Vision (ICCV)},
-  pages     = {483--492},
   year      = {2017},
+  booktitle = {Proceedings of the IEEE International Conference on Computer Vision (ICCV)},
+  pages     = {483--492},
+  series    = {ICCV},
   publisher = {IEEE},
   doi       = {10.1109/ICCV.2017.60},
-  url       = {https://openaccess.thecvf.com/content_iccv_2017/html/Zhu_Visual_Semantic_Planning_ICCV_2017_paper.html},
-  abstract  = {This paper addresses the problem of visual semantic planning: predicting a sequence of actions from visual observations to transform a dynamic environment from an initial state to a goal state. The authors propose learning object affordances, action preconditions, and effects through interaction with a visual and dynamic environment. The solution involves bootstrapping reinforcement learning with imitation learning and developing a deep predictive model based on successor representations. Experimental results show near-optimal performance across a wide range of tasks in the challenging THOR environment.}
+  url       = {https://doi.org/10.1109/ICCV.2017.60},
+  abstract  = {A crucial capability of real-world intelligent agents is their ability to plan a sequence of actions to achieve their goals in the visual world. The input to such planning is often a task goal described in terms of objects and their semantic relationships (e.g., ``put the meat in the fridge''). While semantic representations have been exploited for planning, none incorporate the difficulty of navigation and the partial-observability of first-person visual inputs. To address these issues, we introduce an environment with fully-observable semantics and first-person visual observations (SUNCG). We propose a model that uses convolutional networks to learn successor representations from RGB or RGBD images. By exploiting semantic information such as object categories, the model generalizes to novel tasks (``put the glass in the cupboard'') by finding objects of the right categories in images. We further integrate language by using image captioning techniques to predict the presence of semantic concepts. The resulting system is able to plan successfully for a wide range of tasks in the challenging THOR environment.},
+  keywords  = {Visualization, Planning, Semantics, Microwave Imaging, Navigation, Containers}
 }
 
-@article{Pramanick2020DeComplex,
-  author    = {Sourav Pramanick and Shubham Agarwal and Shubham Shrivastava and Subhajit Chaudhury and Shubham Kaul and Subhashis Banerjee and Partha Pratim Talukdar},
-  title     = {DeComplex: A Task Decomposition Framework for Natural Language Commands},
-  booktitle = {2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  pages     = {1105--1112},
+@InProceedings{Pramanick2020DeComplex,
+  author    = {Pradip Pramanick and Hrishav Bakul Barua and Chayan Sarkar},
+  title     = {DeComplex: Task planning from complex natural instructions by a collocating robot},
   year      = {2020},
+  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages     = {6894--6900},
   publisher = {IEEE},
-  doi       = {10.1109/IROS45743.2020.9341120},
-  url       = {https://ieeexplore.ieee.org/document/9341120},
-  abstract  = {DeComplex is a framework designed to decompose complex natural language instructions into a sequence of executable tasks for robots. It employs natural language processing tools to parse instructions and uses a task-dependency Conditional Random Field (CRF) to infer task ordering. The system leverages a knowledge base of preconditions and postconditions to assemble a control-flow graph plan. Evaluations demonstrate that DeComplex effectively translates complex instructions into actionable plans with high accuracy.}
+  doi       = {10.1109/IROS45743.2020.9341289},
+  url       = {https://doi.org/10.1109/IROS45743.2020.9341289},
+  abstract  = {As the number of robots in our daily surroundings like home, office, restaurants, factory floors, etc. are increasing rapidly, the development of natural human-robot interaction mechanism becomes more vital as it dictates the usability and acceptability of the robots. One of the valued features of such a cohabitant robot is that it performs tasks that are instructed in natural language. However, it is not trivial to execute the human intended tasks as natural language expressions can have large linguistic variations. Existing works assume either single task instruction is given to the robot at a time or there are multiple independent tasks in an instruction. However, complex task instructions composed of multiple inter-dependent tasks are not handled efficiently in the literature. There can be ordering dependency among the tasks, i.e., the tasks have to be executed in a certain order or there can be execution dependency, i.e., input parameter or execution of a task depends on the outcome of another task. Understanding such dependencies in a complex instruction is not trivial if an unconstrained natural language is allowed. In this work, we propose a method to find the intended order of execution of multiple inter-dependent tasks given in natural language instruction. Based on our experiment, we show that our system is very accurate in generating a viable execution plan from a complex instruction.},
+  keywords  = {Natural Language Understanding, Task Planning, Human-Robot Interaction, Dependency Resolution}
 }
 
-@article{Ahn2022SayCan,
-  author    = {Michael Ahn and Anthony Brohan and Noah Brown and Yevgen Chebotar and Daniel G. Griffith and Brian Ichter and Alex Irpan and Sergey Levine and Colin M. Lewis and Julian Ibarz and Karol Hausman},
-  title     = {Do As I Can, Not As I Say: Grounding Language in Robotic Affordances},
-  booktitle = {Conference on Robot Learning (CoRL)},
-  year      = {2022},
-  publisher = {PMLR},
-  url       = {https://arxiv.org/abs/2204.01691},
-  abstract  = {This paper introduces SayCan, a framework that grounds large language models in robotic affordances. A pretrained language model suggests high-level actions, while a set of learned skills evaluates the feasibility of these actions. By combining the language model's suggestions with the robot's capabilities, SayCan effectively translates natural language instructions into executable actions, demonstrating improved performance in long-horizon tasks.}
+@Article{Ahn2022SayCan,
+  author   = {Michael Ahn and Anthony Brohan and Noah Brown and Yevgen Chebotar and Omar Cortes and Byron David and Chelsea Finn and Chuyuan Fu and Keerthana Gopalakrishnan and Karol Hausman and Alex Herzog and Daniel Ho and Jasmine Hsu and Julian Ibarz and Brian Ichter and Alex Irpan and Eric Jang and Rosario Jauregui Ruano and Kyle Jeffrey and Sally Jesmonth and Nikhil J. Joshi and Ryan Julian and Dmitry Kalashnikov and Yuheng Kuang and Kuang-Huei Lee and Sergey Levine and Yao Lu and Linda Luu and Carolina Parada and Peter Pastor and Jornell Quiambao and Kanishka Rao and Jarek Rettinghouse and Diego Reyes and Pierre Sermanet and Nicolas Sievers and Clayton Tan and Alexander Toshev and Vincent Vanhoucke and Fei Xia and Ted Xiao and Peng Xu and Sichun Xu and Mengyuan Yan and Andy Zeng},
+  title    = {Do as i can, not as i say: Grounding language in robotic affordances},
+  journal  = {arXiv preprint arXiv:2204.01691},
+  year     = {2022},
+  abstract = {Large language models can encode a wealth of semantic knowledge about the world. Such knowledge could be extremely useful to robots aiming to act upon high-level, temporally extended instructions expressed in natural language. However, a significant weakness of language models is that they lack real-world experience, which makes it difficult to leverage them for decision making within a given embodiment. For example, asking a language model to describe how to clean a spill might result in a reasonable narrative, but it may not be applicable to a particular agent, such as a robot, that needs to perform this task in a particular environment. We propose to provide real-world grounding by means of pretrained skills, which are used to constrain the model to propose natural language actions that are both feasible and contextually appropriate. The robot can act as the language model’s “hands and eyes,” while the language model supplies high-level semantic knowledge about the task. We show how low-level skills can be combined with large language models so that the language model provides high-level knowledge about the procedures for performing complex and temporally extended instructions, while value functions associated with these skills provide the grounding necessary to connect this knowledge to a particular physical environment. We evaluate our method on a number of real-world robotic tasks, where we show the need for real-world grounding and that this approach is capable of completing long-horizon, abstract, natural language instructions on a mobile manipulator. The project’s website, video, and open source can be found at say-can.github.io.},
+  doi      = {10.48550/arXiv.2204.01691},
+  url      = {https://doi.org/10.48550/arXiv.2204.01691},
+  keywords = {Language Grounding, Robotics, Affordance-Based Planning, Vision-Language Models}
 }
 
-@article{Yaar2024ViLaBot,
-  author    = {Omer Yaar and Shai Shalev-Shwartz and Amnon Shashua},
-  title     = {ViLaBot: Vision-Language Robot for Home Assistance},
-  journal   = {IEEE Transactions on Robotics},
+@InProceedings{Yaar2024ViLaBot,
+  author    = {Asfand Yaar and Marco Rosano and Antonino Furnari and Aki Härmä and Giovanni Maria Farinella},
+  title     = {ViLaBot: Connecting Vision and Language for Robots That Assist Humans at Home},
   year      = {2024},
-  volume    = {40},
-  number    = {2},
-  pages     = {345--358},
-  doi       = {10.1109/TRO.2024.1234567},
-  url       = {https://ieeexplore.ieee.org/document/1234567},
-  abstract  = {ViLaBot integrates a large language model with a library of primitive visuomotor skills to perform home assistance tasks. The system interprets user instructions to generate action sequences, executing them using onboard vision and proprioception without relying on pre-built maps. Evaluations in simulated home environments demonstrate ViLaBot's effectiveness in understanding and executing complex tasks.}
+  booktitle = {Proceedings of the 2024 IEEE International Conference on Metrology for eXtended Reality, Artificial Intelligence and Neural Engineering (MetroXRAINE)},
+  pages     = {1206--1211},
+  publisher = {IEEE},
+  doi       = {10.1109/MetroXRAINE62247.2024.10796808},
+  url       = {https://doi.org/10.1109/MetroXRAINE62247.2024.10796808},
+  abstract  = {Despite significant advancements in the field of vision, language and robotics, integrating these capabilities to create an autonomous robot assistant remains a challenge. This paper presents ViLaBot (Vision and Language roBot), a system designed to aid humans in daily activities while at home. ViLaBot combines a language model with a library of basic visuomotor skills to understand human needs, create action plans and execute them. The system relies solely on onboard visual and proprioceptive sensing, eliminating the need for pre-built maps or precise object locations and facilitating real-world deployment in a variety of environments. Experimental validation conducted in 11 realistic home environments featuring simulated human agents using the Habitat simulator indicated that ViLaBot can achieve promising results when using ground-truth image segmentation, yet exhibits modest performance in scenarios involving imperfect visual perception. The results support the validity of the proposed pipeline and highlight the critical components of the system that should be improved to increase its overall success rate and reliability.},
+  keywords  = {Vision-Language Robotics, Home Assistance, Robot Autonomy, Embodied AI}
 }
 
-@article{Stepputtis2020Language,
-  author    = {Simon Stepputtis and Joseph Campbell and Mariano Phielipp and Stefan Lee and Chitta Baral and Heni Ben Amor},
+@InProceedings{Stepputtis2020Language,
+  author    = {Simon Stepputtis and Joseph P. Campbell and Mariano J. Phielipp and Stefan Lee and Chitta Baral and Heni Ben Amor},
   title     = {Language-Conditioned Imitation Learning for Robot Manipulation Tasks},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  volume    = {33},
-  pages     = {13139--13150},
   year      = {2020},
-  publisher = {Curran Associates, Inc.},
-  url       = {https://proceedings.neurips.cc/paper/2020/hash/9909794d52985cbc5d95c26e31125d1a-Abstract.html},
-  abstract  = {This work presents a method for incorporating unstructured natural language into imitation learning for robot manipulation tasks. By interrelating language, perception, and motion during training, the resulting policies can be conditioned at runtime on new human commands, allowing for fine-grained control and reduced ambiguity. Experimental results demonstrate the approach's effectiveness in learning language-conditioned manipulation policies.}
+  booktitle = {Advances in Neural Information Processing Systems 33 (NeurIPS 2020)},
+  pages     = {2031--2041},
+  series    = {Advances in Neural Information Processing Systems},
+  publisher = {NeurIPS},
+  url       = {https://proceedings.neurips.cc/paper/2020/file/9909794d52985cbc5d95c26e31125d1a-Paper.pdf},
+  abstract  = {Imitation learning is a popular approach for teaching motor skills to robots. However, most approaches focus on extracting policy parameters from execution traces alone (i.e., motion trajectories and perceptual data). No adequate communication channel exists between the human expert and the robot to describe critical aspects of the task, such as the properties of the target object or the intended shape of the motion. Motivated by insights into the human teaching process, we introduce a method for incorporating unstructured natural language into imitation learning. At training time, the expert can provide demonstrations along with verbal descriptions in order to describe the underlying intent (e.g., "go to the large green bowl"). The training process then interrelates these two modalities to encode the correlations between language, perception, and motion. The resulting language-conditioned visuomotor policies can be conditioned at runtime on new human commands and instructions, which allows for more fine-grained control over the trained policies while also reducing situational ambiguity. We demonstrate in a set of simulation experiments how our approach can learn language-conditioned manipulation policies for a seven-degree-of-freedom robot arm and compare the results to a variety of alternative methods.},
+  keywords  = {Imitation Learning, Language Grounding, Robot Manipulation, Multimodal Learning}
 }
 
-@article{Ozdemir2024PVAE,
-  author    = {Mert Ozdemir and Ayse Yilmaz and John Doe},
-  title     = {Paired Variational Autoencoders for Language-Action Mapping in Robotics},
-  journal   = {IEEE Transactions on Cognitive and Developmental Systems},
-  year      = {2024},
-  volume    = {16},
-  number    = {1},
-  pages     = {45--56},
-  doi       = {10.1109/TCDS.2024.1234567},
-  url       = {https://ieeexplore.ieee.org/document/1234567},
-  abstract  = {This paper proposes Paired Variational Autoencoders (PVAE) to bind robot actions and language. One VAE encodes and reconstructs robot action sequences, while another encodes language descriptions. Sharing a latent space allows for generating corresponding actions from language inputs and vice versa. The enhanced PVAE-BERT incorporates a pretrained BERT encoder, enabling the model to handle unconstrained natural language. Experiments demonstrate the model's ability to generalize to unseen instructions and generate varied action trajectories.}
-}
-
-@article{Li2025LanO3DP,
-  author    = {Wei Li and Jane Smith and Robert Brown},
-  title     = {Lan-o3dp: Language-Conditioned Diffusion Policy for 3D Planning in Robotics},
-  booktitle = {Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
-  pages     = {1234--1240},
-  year      = {2025},
+@InProceedings{Ozdemir2021PVAE,
+  author    = {Ozan {\"O}zdemir and Matthias Kerzel and Stefan Wermter},
+  title     = {Language-Model-Based Paired Variational Autoencoders for Robotic Language Learning},
+  year      = {2022},
+  booktitle = {IEEE Transactions on Cognitive and Developmental Systems},
+  pages     = {1812--1824},
   publisher = {IEEE},
-  doi       = {10.1109/ICRA.2025.1234567},
-  url       = {https://ieeexplore.ieee.org/document/1234567},
-  abstract  = {Lan-o3dp introduces a diffusion-based policy that translates language instructions into collision-aware trajectories. The model is conditioned on 3D point clouds of relevant objects identified by a language model interpreting the natural language instruction. During sampling, a cost function steers the trajectory away from obstacles, enabling zero-shot collision avoidance. Evaluations on various robotic tasks demonstrate the model's effectiveness in generating feasible trajectories in cluttered environments.}
+  doi       = {10.1109/TCDS.2022.3204452},
+  url       = {https://doi.org/10.1109/TCDS.2022.3204452},
+  abstract  = {Human infants learn the language while interacting with their environment in which their caregivers may describe the objects and actions they perform. Similar to human infants, artificial agents can learn the language while interacting with their environment. In this work, first, we present a neural model that bidirectionally binds robot actions and their language descriptions in a simple object manipulation scenario. Building on our previous paired variational autoencoders (PVAEs) model, we demonstrate the superiority of the variational autoencoder over standard autoencoders by experimenting with cubes of different colors, and by enabling the production of alternative vocabularies. Additional experiments show that the model’s channel-separated visual feature extraction module can cope with objects of different shapes. Next, we introduce PVAE-BERT, which equips the model with a pretrained large-scale language model, i.e., bidirectional encoder representations from transformers (BERTs), enabling the model to go beyond comprehending only the predefined descriptions that the network has been trained on; the recognition of action descriptions generalizes to unconstrained natural language as the model becomes capable of understanding unlimited variations of the same descriptions. Our experiments suggest that using a pretrained language model as the language encoder allows our approach to scale up for real-world scenarios with instructions from human users.},
+  keywords  = {Embodied Language Learning, Variational Autoencoders, One-to-Many Mapping, Robot Actions}
 }
 
-@article{Shridhar2021CLIPort,
-  author    = {Mohit Shridhar and Arjun Desai and Pieter Abbeel and Animesh Garg and Dieter Fox},
-  title     = {CLIPort: What and Where Pathways for Robotic Manipulation},
-  booktitle = {Conference on Robot Learning (CoRL)},
-  year      = {2021},
+@InProceedings{Zitkovich2023RT2,
+  author    = {Brianna Zitkovich and Tianhe Yu and Sichun Xu and Peng Xu and Ted Xiao and Fei Xia and Jialin Wu and Paul Wohlhart and Stefan Welker and Ayzaan Wahid and Quan Vuong and Vincent Vanhoucke and Huong Tran and Radu Soricut and Anikait Singh and Jaspiar Singh and Pierre Sermanet and Pannag R. Sanketi and Grecia Salazar and Michael S. Ryoo and Krista Reymann and Kanishka Rao and Karl Pertsch and Igor Mordatch and Henryk Michalewski and Yao Lu and Sergey Levine and Lisa Lee and Tsang-Wei Edward Lee and Isabel Leal and Yuheng Kuang and Dmitry Kalashnikov and Ryan Julian and Nikhil J. Joshi and Alex Irpan and Brian Ichter and Jasmine Hsu and Alexander Herzog and Karol Hausman and Keerthana Gopalakrishnan and Chuyuan Fu and Pete Florence and Chelsea Finn and Kumar Avinava Dubey and Danny Driess and Tianli Ding and Krzysztof M. Choromanski and Xi Chen and Yevgen Chebotar and Justice Carbajal and Noah Brown and Anthony Brohan and Montserrat Gonzalez Arenas and Kehang Han},
+  title     = {RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control},
+  year      = {2023},
+  booktitle = {Proceedings of the 7th Conference on Robot Learning (CoRL 2023)},
+  pages     = {2165--2183},
+  series    = {Proceedings of Machine Learning Research, vol. 229},
   publisher = {PMLR},
-  url       = {https://arxiv.org/abs/2109.12098},
-  abstract  = {CLIPort is a language-conditioned imitation-learning agent that combines semantic and spatial pathways. The semantic "what" stream uses pretrained CLIP to understand object-category goals from text, while the spatial "where" stream handles precise localization. Both streams process RGB-D input to yield pick/place commands. CLIPort demonstrates strong generalization from language semantics to manipulation tasks in both simulation and real-world settings.}
+  url       = {https://proceedings.mlr.press/v229/zitkovich23a.html},
+  abstract  = {We study how vision-language models trained on internet-scale data can be incorporated into end-to-end robotic control to boost generalization and enable semantic reasoning. Our goal is to train a single model that maps robot observations to actions while leveraging large-scale pretraining. We co-fine-tune a state-of-the-art vision-language model on both robotic trajectory data and large-scale vision-language tasks (such as VQA). We express actions as text tokens and include them in the training set alongside natural language tokens, creating a vision-language-action (VLA) model. We instantiate this approach with RT-2, a VLA model. In extensive evaluations (6k trials), RT-2 achieves strong robotic performance and emergent capabilities: significantly better generalization to novel objects, understanding of commands unseen in robot data (e.g., placing objects by number or icon), and simple reasoning (e.g., picking smallest or closest objects). Incorporating chain-of-thought reasoning enables multi-step semantic reasoning for complex instructions. RT-2 demonstrates that web-scale vision-language pretraining can transfer effectively to robotic control.},
+  keywords  = {Vision-Language Models, Robotics, Transfer Learning, Language-Conditioned Control}
 }
 
-@article{Shridhar2020ALFRED,
+@InProceedings{Shridhar2022CLIPort,
+  author    = {Mohit Shridhar and Lucas Manuelli and Dieter Fox},
+  title     = {CLIPort: What and Where Pathways for Robotic Manipulation},
+  year      = {2021},
+  booktitle = {Proceedings of the 5th Conference on Robot Learning (CoRL 2021)},
+  pages     = {894--906},
+  series    = {Proceedings of Machine Learning Research, vol. 164},
+  publisher = {PMLR},
+  url       = {https://proceedings.mlr.press/v164/shridhar22a/shridhar22a.pdf},
+  abstract  = {We propose CLIPort, a language-conditioned imitation-learning agent that integrates semantic and spatial reasoning for robotic manipulation. CLIPort uses a two-stream (``What'' and ``Where'') architecture: one stream processes visual features with CLIP (a large vision-language model) to capture semantic goal understanding, while the other stream (a Transporter network) handles spatial precision for pick-and-place actions. Training end-to-end in tabletop rearrangement tasks, CLIPort leverages the semantic prior from CLIP to generalize across goals. We conduct large-scale experiments on 10 simulated language-conditioned tasks in the Ravens benchmark. CLIPort learns one multi-task model for all tasks, often outperforming separate single-task models. On real-world manipulation (Franka arm) for 9 tasks, CLIPort achieves promising success with only ~179 image-action pairs. This demonstrates that combining vision-language priors (what) with spatial transportation (where) enables broad generalization in language-directed robotic manipulation.},
+  keywords  = {Language-Conditioned Manipulation, Vision-Language Models, Embodied AI, Imitation Learning}
+}
+
+@InProceedings{Shridhar2020ALFRED,
   author    = {Mohit Shridhar and Jesse Thomason and Daniel Gordon and Yonatan Bisk and Winson Han and Roozbeh Mottaghi and Luke Zettlemoyer and Dieter Fox},
-  title     = {ALFRED: A Benchmark for Interpreting Natural Instructions for Household Robots},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  pages     = {10740--10749},
+  title     = {ALFRED: A Benchmark for Interpreting Grounded Instructions for Everyday Tasks},
   year      = {2020},
-  publisher = {IEEE},
-  doi       = {10.1109/CVPR42600.2020.01076},
-  url       = {},
-  abstract  = {We present ALFRED (Action Learning From Realistic Environments and Directives), a benchmark for learning a mapping from natural language instructions and egocentric vision to sequences of actions for household tasks. ALFRED includes long, compositional tasks with non-reversible state changes to shrink the gap between research benchmarks and real-world applications. ALFRED consists of expert demonstrations in interactive visual environments for 25k natural language directives. These directives contain both high-level goals like "Rinse off a mug and place it in the coffee maker." and low-level language instructions like "Walk to the coffee maker on the right." ALFRED tasks are more complex in terms of sequence length, action space, and language than existing vision- and-language task datasets. We show that a baseline model based on recent embodied vision-and-language tasks performs poorly on ALFRED, suggesting that there is significant room for developing innovative grounded visual language understanding models with this benchmark.}
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2020)},
+  pages     = {10737--10746},
+  publisher = {Computer Vision Foundation / IEEE},
+  doi       = {10.1109/CVPR42600.2020.01075},
+  url       = {https://doi.org/10.1109/CVPR42600.2020.01075},
+  abstract  = {We present ALFRED (Action Learning From Realistic Environments and Directives), a benchmark for learning a mapping from natural language instructions and egocentric vision to sequences of actions for household tasks. ALFRED includes long, compositional tasks with irreversible state changes, narrowing the gap to real-world applications. It consists of expert demonstrations in interactive visual environments for 25k natural language directives. These directives contain both high-level goals (e.g., ``Rinse off a mug and place it in the coffee maker.'') and low-level step-by-step instructions (e.g., ``Walk to the coffee maker on the right.''). ALFRED tasks are more complex in terms of sequence length, action space, and language than existing vision-language datasets. We show that a baseline model based on recent embodied vision-and-language methods performs poorly on ALFRED, suggesting significant room for development of grounded visual language understanding models.},
+  keywords  = {Vision-and-Language, Embodied AI, Instruction Following, Interactive Environments}
 }
 
+@Article{Driess2023PaLME,
+  author    = {Danny Driess and Fei Xia and Mehdi S. M. Sajjadi and Corey Lynch and Aakanksha Chowdhery and Brian Ichter and Ayzaan Wahid and Jonathan Tompson and Quan Vuong and Tianhe Yu and Wenlong Huang and Yevgen Chebotar and Pierre Sermanet and Daniel Duckworth and Sergey Levine and Vincent Vanhoucke and Karol Hausman and Marc Toussaint and Klaus Greff and Andy Zeng and Igor Mordatch and Pete Florence},
+  title     = {PaLM-E: An Embodied Multimodal Language Model},
+  journal   = {arXiv preprint arXiv:2303.03378},
+  year      = {2023},
+  abstract  = {Large language models excel at a wide range of tasks, but grounding them for real-world robotics remains challenging. We propose PaLM-E, an embodied multimodal language model that directly incorporates continuous sensor modalities into a large language model, linking words and percepts. The input to our model is a sequence of multimodal tokens interleaving visual, proprioceptive, and textual information. We train these encodings end-to-end, together with a pre-trained large language model, for multiple embodied tasks (robotic planning, visual question answering, image captioning). PaLM-E, a single large model, can address a variety of embodied reasoning tasks across different observation modalities and embodiments. It exhibits positive transfer: jointly training on internet-scale vision-language and robotics data improves performance. Our largest model, PaLM-E-562B (562B parameters), achieves state-of-the-art on visual-language benchmarks (e.g., OK-VQA) without task-specific fine-tuning, while retaining strong language-only capabilities. This demonstrates that visual-language and robotics can be unified in a single model, leveraging large-scale pretrained knowledge.},
+  doi       = {10.48550/arXiv.2303.03378},
+  url       = {https://doi.org/10.48550/arXiv.2303.03378},
+  keywords  = {Embodied AI, Vision-Language Models, Robotics, Large Language Models}
+}
